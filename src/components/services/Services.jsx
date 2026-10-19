@@ -51,9 +51,15 @@ export function Services({ onSelectService, onNavigate }) {
             </button>
             <button
               onClick={() => scrollToSection('#contact')}
-              className="btn-gold"
+              className="group inline-flex items-center justify-between gap-4 rounded-full bg-gold text-espresso hover:bg-gold-soft py-2 pl-7 pr-2 text-xs uppercase tracking-wider-2 font-semibold transition-all duration-500 ease-out-expo shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
-              Discuss Your Project <ArrowUpRight className="h-4 w-4" />
+              <span>Discuss Your Project</span>
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-espresso text-ivory transition-transform duration-500 ease-out-expo group-hover:rotate-45"
+              >
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
             </button>
           </div>
         </div>

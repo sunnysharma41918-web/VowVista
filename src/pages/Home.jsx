@@ -6,10 +6,11 @@ import { WhyUs } from '@/components/why-us/WhyUs';
 import { Testimonials } from '@/components/testimonials/Testimonials';
 import { Contact } from '@/components/contact/Contact';
 
-export function Home({ onSelectService, onNavigate }) {
+export function Home({ onSelectService, onNavigate, isReady = true }) {
   return (
     <>
       <Hero
+        isReady={isReady}
         onExploreServices={() => onNavigate && onNavigate('services')}
         onContact={() => onNavigate && onNavigate('home', undefined, '#contact')}
       />

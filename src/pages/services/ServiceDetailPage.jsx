@@ -226,9 +226,18 @@ export function ServiceDetailPage({
               </div>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:mt-0 lg:justify-end">
-                <button type="button" onClick={inquire} className={btnLight}>
-                  Enquire for this service
-                  <ArrowUpRight className="h-4 w-4" />
+                <button
+                  type="button"
+                  onClick={inquire}
+                  className={`group inline-flex items-center justify-between gap-4 rounded-full bg-ivory text-espresso hover:bg-gold-soft py-2 pl-7 pr-2 text-sm font-medium transition-all duration-500 ease-out-expo shadow-sm ${FOCUS}`}
+                >
+                  <span>Enquire for this service</span>
+                  <span
+                    aria-hidden="true"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-espresso text-ivory transition-transform duration-500 ease-out-expo group-hover:rotate-45"
+                  >
+                    <ArrowUpRight className="h-4 w-4" />
+                  </span>
                 </button>
                 <button type="button" onClick={() => jump('included')} className={btnLine}>
                   Explore scope

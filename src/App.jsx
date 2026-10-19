@@ -8,6 +8,7 @@ import { AboutPage } from '@/pages/About';
 import { ContactPage } from '@/pages/Contact';
 import { initSmoothScroll } from '@/animations/scroll';
 import { services } from '@/data/services';
+import { WebsiteLoader } from '@/components/loader/WebsiteLoader';
 
 export function ScrollProgress() {
   const [progress, setProgress] = useState(0);
@@ -47,6 +48,15 @@ export function ScrollProgress() {
 export default function App() {
   const [view, setView] = useState('home');
   const [activeServiceId, setActiveServiceId] = useState(null);
+  const [showLandingLoader, setShowLandingLoader] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const hash = window.location.hash || '';
+    const isSubPage =
+      hash.startsWith('#/services') ||
+      hash === '#/about' ||
+      hash === '#/contact';
+    return !isSubPage;
+  });
 
   // Initialize Lenis smooth scroll
   useEffect(() => {
@@ -130,6 +140,9 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-espresso text-ivory selection:bg-gold/40 selection:text-white">
+      {showLandingLoader && view === 'home' && (
+        <WebsiteLoader onComplete={() => setShowLandingLoader(false)} />
+      )}
       <ScrollProgress />
       <Nav
         currentView={view}
@@ -153,6 +166,7 @@ export default function App() {
         )}
         {view === 'home' && (
           <Home
+            isReady={!showLandingLoader}
             onSelectService={(serviceId) => handleNavigate('services', serviceId)}
             onNavigate={handleNavigate}
           />

@@ -26,12 +26,12 @@ const LINES = [
   { text: 'Take Shape.', cls: 'italic text-gold-deep' }
 ];
 
-export function Hero({ onExploreServices, onContact }) {
+export function Hero({ onExploreServices, onContact, isReady = true }) {
   const root = useRef(null);
 
   useEffect(() => {
     const el = root.current;
-    if (!el) return undefined;
+    if (!el || !isReady) return undefined;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) return undefined;
 
@@ -76,7 +76,7 @@ export function Hero({ onExploreServices, onContact }) {
       cleanups.forEach((fn) => fn());
       ctx.revert();
     };
-  }, []);
+  }, [isReady]);
 
   const handleServicesClick = () => (onExploreServices ? onExploreServices() : scrollToSection('#services'));
   const handleContactClick = () => (onContact ? onContact() : scrollToSection('#contact'));

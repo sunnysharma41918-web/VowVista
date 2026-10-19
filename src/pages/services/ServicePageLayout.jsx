@@ -284,10 +284,15 @@ export function ServicePageLayout({ service, details = {}, customSection = null,
                   <button
                     type="button"
                     onClick={inquire}
-                    className={`inline-flex h-12 md:h-13 items-center gap-2 rounded-full bg-gold px-7 text-sm md:text-[15px] font-medium text-espresso transition-colors hover:bg-gold-soft ${FOCUS}`}
+                    className={`group inline-flex items-center justify-between gap-4 rounded-full bg-gold text-espresso hover:bg-gold-soft py-2 pl-7 pr-2 text-sm md:text-[15px] font-medium transition-all duration-500 ease-out-expo shadow-sm ${FOCUS}`}
                   >
-                    Enquire now
-                    <ArrowUpRight className="h-4 w-4" />
+                    <span>Enquire now</span>
+                    <span
+                      aria-hidden="true"
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-espresso text-ivory transition-transform duration-500 ease-out-expo group-hover:rotate-45"
+                    >
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
                   </button>
                   <button
                     type="button"
@@ -536,17 +541,30 @@ export function ServicePageLayout({ service, details = {}, customSection = null,
                 <button
                   type="button"
                   onClick={inquire}
-                  className={`inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold px-8 text-sm md:text-[15px] font-medium text-espresso transition-colors hover:bg-gold-soft ${FOCUS}`}
+                  className={`group inline-flex items-center justify-between gap-4 rounded-full bg-gold text-espresso hover:bg-gold-soft py-2 pl-7 pr-2 text-sm md:text-[15px] font-medium transition-all duration-500 ease-out-expo shadow-sm ${FOCUS}`}
                 >
-                  Book a consultation
-                  <ArrowUpRight className="h-4 w-4" />
+                  <span>Book a consultation</span>
+                  <span
+                    aria-hidden="true"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-espresso text-ivory transition-transform duration-500 ease-out-expo group-hover:rotate-45"
+                  >
+                    <ArrowUpRight className="h-4 w-4" />
+                  </span>
                 </button>
                 <a
                   href={mailHref}
-                  className={`inline-flex h-13 items-center justify-center gap-2 rounded-full border border-ivory/40 px-6 text-sm md:text-[15px] transition-colors hover:bg-ivory/10 ${FOCUS}`}
+                  className={`group inline-flex items-center justify-between gap-4 rounded-full border border-ivory/40 text-ivory hover:border-gold hover:text-gold py-2 pl-6 pr-2 text-sm md:text-[15px] transition-all duration-500 ease-out-expo ${FOCUS}`}
                 >
-                  <Mail className="h-4 w-4" />
-                  {EMAIL}
+                  <span className="flex items-center gap-2.5">
+                    <Mail className="h-4 w-4 text-gold" />
+                    <span>{EMAIL}</span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ivory/40 text-ivory transition-all duration-500 ease-out-expo group-hover:border-gold group-hover:bg-gold group-hover:text-espresso group-hover:rotate-45"
+                  >
+                    <ArrowUpRight className="h-4 w-4" />
+                  </span>
                 </a>
               </div>
             </div>
