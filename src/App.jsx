@@ -1,3 +1,4 @@
+// Vow Vista Web Application
 import { useState, useEffect } from 'react';
 import { Nav } from '@/components/nav/Nav';
 import { Footer } from '@/components/footer/Footer';
