@@ -8,8 +8,8 @@ import {
   useSpring,
 } from 'framer-motion';
 import { ArrowUpRight, ChevronDown, Menu, X } from 'lucide-react';
-import { navLinks } from '../../data/nav.js';
-import { services } from '../../data/services.js';
+import { navLinks } from '@/data/nav';
+import { services } from '@/data/services';
 
 /* ------------------------------------------------------------------ */
 /*  Nav, v7 (floating island)                                          */
