@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Nav } from '@/components/nav/Nav';
-import { Footer } from '@/components/footer/Footer';
-import { Home } from '@/pages/Home';
-import { ServicesPage } from '@/pages/Services';
-import { AboutPage } from '@/pages/About';
-import { ContactPage } from '@/pages/Contact';
-import { initSmoothScroll } from '@/animations/scroll';
-import { services } from '@/data/services';
+import { Nav } from '@/components/nav/Nav.jsx';
+import { Footer } from '@/components/footer/Footer.jsx';
+import { Home } from '@/pages/Home.jsx';
+import { ServicesPage } from '@/pages/Services.jsx';
+import { AboutPage } from '@/pages/About.jsx';
+import { ContactPage } from '@/pages/Contact.jsx';
+import { initSmoothScroll } from '@/animations/scroll.js';
+import { services } from '@/data/services.js';
 
 export function ScrollProgress() {
   const [progress, setProgress] = useState(0);
