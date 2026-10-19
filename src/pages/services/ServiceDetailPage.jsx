@@ -18,7 +18,7 @@ import { serviceSpecificDetails } from '@/data/serviceDetails';
 import { ServiceNavbar } from './ServiceNavbar';
 
 const EASE = [0.16, 1, 0.3, 1];
-const EMAIL = 'hello@vowvista.com';
+const EMAIL = 'info@vowvistahospitality.com';
 const FOCUS =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold';
 

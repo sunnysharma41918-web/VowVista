@@ -4,7 +4,7 @@ import { services } from '@/data/services';
 import { useReveal } from '@/animations/gsap';
 import { scrollToSection } from '@/animations/scroll';
 
-const EMAIL = 'hello@vowvista.com';
+const EMAIL = 'info@vowvistahospitality.com';
 const PHONE_DISPLAY = '+91 00000 00000'; // replace with the real number
 const PHONE_HREF = 'tel:+910000000000';
 const WHATSAPP_HREF = 'https://wa.me/910000000000'; // country code + digits, no plus sign
