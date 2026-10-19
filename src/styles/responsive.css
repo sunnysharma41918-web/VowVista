@@ -1,0 +1,30 @@
+/* Responsive typography & layout adjustments */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --section-padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --section-padding: 4rem;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

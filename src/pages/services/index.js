@@ -1,0 +1,12 @@
+export { ServicesIndexPage } from './ServicesIndexPage';
+export { ServiceDetailPage } from './ServiceDetailPage';
+export { ServiceNavbar } from './ServiceNavbar';
+export { ServicePageLayout } from './ServicePageLayout';
+export { WeddingPlannerPage } from './WeddingPlannerPage';
+export { BanquetBookingPage } from './BanquetBookingPage';
+export { ResortsPage } from './ResortsPage';
+export { HotelStaysPage } from './HotelStaysPage';
+export { CorporateEventsPage } from './CorporateEventsPage';
+export { DestinationWeddingsPage } from './DestinationWeddingsPage';
+export { ManagementConsultancyPage } from './ManagementConsultancyPage';
+export { GroupBookingPage } from './GroupBookingPage';
