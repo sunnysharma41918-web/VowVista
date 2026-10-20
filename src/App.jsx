@@ -54,7 +54,9 @@ export default function App() {
     const isSubPage =
       hash.startsWith('#/services') ||
       hash === '#/about' ||
-      hash === '#/contact';
+      hash === '#about' ||
+      hash === '#/contact' ||
+      hash === '#contact';
     return !isSubPage;
   });
 
@@ -79,10 +81,10 @@ export default function App() {
         } else {
           setActiveServiceId('all');
         }
-      } else if (hash === '#/about') {
+      } else if (hash === '#/about' || hash === '#about') {
         setView('about');
         setActiveServiceId(null);
-      } else if (hash === '#/contact') {
+      } else if (hash === '#/contact' || hash === '#contact') {
         setView('contact');
         setActiveServiceId(null);
       } else {

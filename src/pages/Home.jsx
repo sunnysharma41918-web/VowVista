@@ -14,7 +14,7 @@ export function Home({ onSelectService, onNavigate, isReady = true }) {
         onExploreServices={() => onNavigate && onNavigate('services')}
         onContact={() => onNavigate && onNavigate('home', undefined, '#contact')}
       />
-      <About />
+      <About onReadMore={() => onNavigate && onNavigate('about')} />
       <Services onSelectService={onSelectService} onNavigate={onNavigate} />
       <Projects />
       <WhyUs />

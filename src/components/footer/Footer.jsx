@@ -9,9 +9,9 @@ import { scrollToSection } from '@/animations/scroll';
 gsap.registerPlugin(ScrollTrigger);
 
 const EMAIL = 'info@vowvistahospitality.com';
-const PHONE_DISPLAY = '+91 00000 00000'; // replace with the real number
-const PHONE_HREF = 'tel:+910000000000';
-const WHATSAPP_HREF = 'https://wa.me/910000000000';
+const PHONE_DISPLAY = '+91 95992 56909';
+const PHONE_HREF = 'tel:+919599256909';
+const WHATSAPP_HREF = 'https://wa.me/919599256909';
 const FOCUS = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]';
 
 /* Change the palette here */
@@ -32,6 +32,11 @@ export function Footer({ onNavigate }) {
     if (href === '#services') {
       if (onNavigate) onNavigate('services', 'all');
       else window.location.hash = '#/services';
+      return;
+    }
+    if (href === '#about') {
+      if (onNavigate) onNavigate('about');
+      else window.location.hash = '#/about';
       return;
     }
     if (onNavigate) onNavigate('home', undefined, href);

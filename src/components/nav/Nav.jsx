@@ -130,6 +130,11 @@ export function Nav({ currentView = 'home', activeServiceId, onNavigate }) {
       else window.location.hash = '#/services';
       return;
     }
+    if (href === '#about') {
+      if (onNavigate) onNavigate('about');
+      else window.location.hash = '#/about';
+      return;
+    }
     if (onNavigate) onNavigate('home', undefined, href);
     else document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -170,10 +175,13 @@ export function Nav({ currentView = 'home', activeServiceId, onNavigate }) {
         className="h-10 w-10 shrink-0 rounded-full object-contain bg-white/95 p-0.5 shadow-[0_2px_10px_rgba(0,0,0,0.3)] transition-transform duration-500 ease-out-expo group-hover:scale-105"
       />
       <div className="flex flex-col text-left">
-        <span className="font-satoshi text-[20px] font-bold leading-none tracking-tight text-ivory">
+        <span
+          className="font-bodoni text-[21px] sm:text-[22px] font-medium tracking-[0.03em] leading-none text-ivory transition-colors duration-300 group-hover:text-gold-soft"
+          style={{ fontFamily: 'var(--font-bodoni)' }}
+        >
           Vow Vista
         </span>
-        <span className="font-satoshi text-[9px] font-medium uppercase tracking-widest text-gold-soft pt-0.5">
+        <span className="font-satoshi text-[8.5px] font-medium uppercase tracking-[0.24em] text-gold-soft pt-1">
           Hospitality &amp; Consultancy
         </span>
       </div>
@@ -353,13 +361,6 @@ export function Nav({ currentView = 'home', activeServiceId, onNavigate }) {
         >
           {logo}
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => handleNavLinkClick('#contact')}
-              className={`inline-flex h-10 items-center rounded-full bg-ivory px-4 text-sm font-medium text-espresso ${FOCUS}`}
-            >
-              Contact
-            </button>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}

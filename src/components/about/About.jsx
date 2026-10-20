@@ -161,7 +161,7 @@ function ModelAvatar({ src, alt }) {
   );
 }
 
-export function About() {
+export function About({ onReadMore }) {
   const root = useRef(null);
   const [statIndex, setStatIndex] = useState(0);
 
@@ -272,7 +272,7 @@ export function About() {
           </h2>
 
           {/* tilted pill */}
-          <div className="ab-pill absolute -top-3 right-[2%] z-30 md:-top-5">
+          <div className="ab-pill absolute -top-3 right-[2%] z-30 hidden md:block md:-top-5">
             <div className="ab-pill-float rotate-[12deg] rounded-full bg-espresso-soft border border-ivory/20 text-ivory px-4 py-1.5 font-satoshi text-[10px] font-bold uppercase tracking-wider-2 shadow-xl md:px-5 md:py-2 md:text-xs">
               People · Places · Possibilities
             </div>
@@ -305,10 +305,13 @@ export function About() {
         </p>
         <button
           type="button"
-          onClick={() => scrollToSection('#services')}
+          onClick={() => {
+            if (onReadMore) onReadMore();
+            else window.location.hash = '#/about';
+          }}
           className="group mt-4 inline-flex items-center gap-4 rounded-full bg-gold text-espresso hover:bg-gold-soft py-1.5 pl-6 pr-1.5 text-sm font-semibold transition-all duration-500 ease-out-expo border border-transparent"
         >
-          Our Services
+          Read More
           <span className="grid h-8 w-8 place-items-center rounded-full bg-espresso text-ivory transition-transform duration-500 ease-out-expo group-hover:rotate-45">
             <ArrowUpRight className="h-4 w-4" />
           </span>

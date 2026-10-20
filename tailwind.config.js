@@ -19,6 +19,8 @@ export default {
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        bodoni: ['"Bodoni Moda"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        cinzel: ['"Cinzel"', '"Cormorant Garamond"', 'serif'],
         sans: ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
         satoshi: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
       },
